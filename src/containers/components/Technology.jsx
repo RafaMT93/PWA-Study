@@ -23,7 +23,7 @@ const Technology = ({ values }) => {
   const renderPost = (post, index) => {
     const { title, image, description, id } = post;
     return (
-      <Col span={12} md={6} key={`post-${index}`}>
+      <Col span={12} md={6} key={`technology-${index}`}>
         <article onClick={() => openPost(id)}>
           <p>
             <strong dangerouslySetInnerHTML={createMarkup(title)} />
