@@ -2,6 +2,8 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import styles from './Home.module.css';
 import Economy from './components/Economy';
+import Technology from './components/Technology';
+import World from './components/World';
 import API from '../API';
 
 const Home = () => {
@@ -34,6 +36,7 @@ const Home = () => {
       <Row gutter={[16, 16]}>
         <Col span={24} md={16}>
           <h2>World</h2>
+          <World values={news?.world} />
         </Col>
         <Col span={24} md={16}>
           <h2>Economy</h2>
@@ -44,6 +47,7 @@ const Home = () => {
       <Row gutter={[16, 16]}>
         <Col span={24} md={16}>
           <h2>Technology</h2>
+          <Technology values={news?.technology} />
         </Col>
       </Row>
     </div>

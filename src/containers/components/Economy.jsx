@@ -7,7 +7,9 @@ import { createMarkup } from '../../utils';
 const Economy = ({ values }) => {
   const history = useHistory();
   const renderImg = ({ image, description }) => (
-    <img src={image.url} alt={description} width="100%" />
+    <div>
+      <img src={image.url} alt={description} width="100%" />
+    </div>
   );
 
   const renderDescription = (description) => (
