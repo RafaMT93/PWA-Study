@@ -1,6 +1,5 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import styles from './Home.module.css';
 import Economy from './components/Economy';
 import Technology from './components/Technology';
 import World from './components/World';
@@ -23,8 +22,8 @@ const Home = () => {
     setLoading(true);
     Promise.allSettled([
       API.GET_NEWS('world'),
-      API.GET_NEWS('technology'),
       API.GET_NEWS('economy'),
+      API.GET_NEWS('technology'),
     ])
       .then(handleNews)
       .catch((err) => console.log('Error', err));
@@ -38,7 +37,7 @@ const Home = () => {
           <h2>World</h2>
           <World values={news?.world} />
         </Col>
-        <Col span={24} md={16}>
+        <Col span={24} md={8}>
           <h2>Economy</h2>
           <Economy values={news?.economy} />
         </Col>

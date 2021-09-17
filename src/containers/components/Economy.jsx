@@ -6,10 +6,9 @@ import { createMarkup } from '../../utils';
 
 const Economy = ({ values }) => {
   const history = useHistory();
+
   const renderImg = ({ image, description }) => (
-    <div>
-      <img src={image.url} alt={description} width="100%" />
-    </div>
+    <img src={image.url} alt={description} width="100%" />
   );
 
   const renderDescription = (description) => (
